@@ -1,7 +1,7 @@
 :root {
     --main-color: rgb(175, 204, 151);
     --second-color: #FFAAA7;
-    --third-color: rgba(255, 211, 180, 0.58);
+    --third-color: rgba(246, 243, 241, 0.58);
     --fourth-color: #b22901;
 }
 
@@ -36,8 +36,24 @@ body {
 .current-conditions {
     color: var(--second-color);
     background-color: var(--third-color);
+    border-radius: 2rem;
+    border: 0.5rem white;
 }
 #city {
     color: var(--second-color);
-font-size: 50px;
+}
+.city-title{
+    font-weight: bold;
+    font-size: 4rem;
+}
+.shire{
+    border: white;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+    background-color: var(--third-color);
+}
+
+.five-day-card {
+    border: 1rem white;
+    border-radius: 1.25rem;
 }

@@ -144,7 +144,7 @@ $(() => {
     //renders city name in an h1 in div with #city
     function renderDivCity(cityName) {
         grabCityDiv.innerHTML =
-            `<h1 class="text-center">${cityName}</h1>`
+            `<h1 class="city-title text-center">${cityName}</h1>`
     };
 
     //render current weather conditions
