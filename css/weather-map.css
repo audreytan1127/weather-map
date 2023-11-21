@@ -1,7 +1,7 @@
 :root {
     --main-color: rgb(175, 204, 151);
-    --second-color: #f3cb3b;
-    --third-color: rgba(2, 0, 0, 0.49);
+    --second-color: #FFAAA7;
+    --third-color: rgba(255, 211, 180, 0.58);
     --fourth-color: #b22901;
 }
 
@@ -14,7 +14,6 @@
     background-color: var(--second-color);
 }
 .five-day-card {
-
    color: var(--second-color);
     background-color: var(--third-color);
 
@@ -25,9 +24,9 @@ ul.five-day-weather-items li {
 
 }
 body {
-    font-family: "Tangerine", cursive;
+    font-family: "Cormorant Garamond", serif;
     font-size: 24px;
-    background-image: url("../css/img/monstera.jpg");
+    background-image: url("../css/img/green-watercolor.png");
     /*background-image: url("../img/burning-lotr.jpg");*/
     background-size: cover;
     background-attachment: fixed;

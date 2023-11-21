@@ -13,9 +13,6 @@ $(() => {
     //markers created will be stored into variable marker
     const marker = createMarker();
 
-    //popups created will be stored into variable popup
-    const popup = createPopup();
-
     //coordinates for the alamo downtown san antonio
     const ALAMO_COORDINATES = ['29.4260', '-98.4861'];
 
@@ -47,7 +44,7 @@ $(() => {
 
             zoom: 10, //zoom it starts at
 
-            center: [-98.4912, 29.4252], //starting coordinates at codeup SA
+            center: [-98.4861, 29.4260], //starting coordinates at the alamo
         }
         return new mapboxgl.Map(mapOptions); //created new map object and stored global variable
     }
@@ -58,30 +55,12 @@ $(() => {
         //function that creates a marker at codeup
         return new mapboxgl.Marker({draggable: true})
 
-            //sets the coords for codeup
-            .setLngLat([-98.4912, 29.4252])
+            //sets the coords for the alamo
+            .setLngLat([-98.4861, 29.4260])
 
             //adds marker to map
             .addTo(map);
 
-    }
-
-    // //function to create a popup for codeup (class exercise)
-    function createPopup() {
-
-        //creates popup
-        return new mapboxgl.Popup()
-
-            //sets coords at codeup
-            .setLngLat([-98.4912, 29.4252])
-
-            //adds html elements to popup and prints content into popup
-            .setHTML(`
-            <div>
-            <h1>Codeup</h1>
-            <p> Here is codeup!</p>
-            </div>
-`);
     }
 
     //function that takes in coordinates from center of map and prints on the screen the address
