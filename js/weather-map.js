@@ -29,7 +29,6 @@ $(() => {
     const fiveDayForecast = document.querySelector('#five-day-forecast');
 
 
-
 ///////////////////     FUNCTIONS   //////////////////////////////////////////////
 
     //function that initializes the map to center on codeup (class exercise)
@@ -49,7 +48,7 @@ $(() => {
         return new mapboxgl.Map(mapOptions); //created new map object and stored global variable
     }
 
-    // //function to make a marker for codeup (class exercise)
+    // //function to make a marker starting at the Alamo
     function createMarker() {
 
         //function that creates a marker at codeup
@@ -88,7 +87,6 @@ $(() => {
     function getWeatherURL(lat, lon) {
         return `${OPEN_WEATHER_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${OPEN_WEATHER_APPID}`;
     }
-
 
 
 //FUNCTION TO UPDATE WEATHER AND CITY NAME TO MARKER LOCATION
@@ -173,8 +171,6 @@ $(() => {
     }).fail(console.error);
 
 
-
-
 //INITIAL CITY FIVE-DAY WEATHER FORECAST
 //finds humidity, temp, and feels like for five days
     $.ajax(getWeatherURL(...ALAMO_COORDINATES))
@@ -202,8 +198,6 @@ $(() => {
             });
             $('#five-day-forecast').html(currentCityWeather);
         }).fail(console.error);
-
-
 
 
 /////   FUNCTIONS TO find min and max temps
@@ -237,9 +231,6 @@ $(() => {
         })
         .fail(console.error);
 /////////////////       END OF FUNCTIONS to find min and max temps
-
-
-
 
 
 //USER INPUT IN SEARCH BOX WILL ADJUST MAP AND FIVE-DAY FORECAST
@@ -313,15 +304,13 @@ $(() => {
     });
 
 
-
-
-
 //PRESSING GO TO THE SHIRE WILL GO TO THE SHIRE
     //BULLETS DO NOT CHANGE CURRENTLY! WILL CONTINUE WORKING ON FUNCTIONALITY OF BUTTON
     $('#go-to-shire').click(function goToTheShire() {
         $('.page-wrapper').css('background-image', 'url( "../css/img/the-shire.jpg")');
         // $('.five-day-weather-items').attr("src",  "../img/lotr-ring-logo.jpg");
-        $(".logo").attr("src", "../css/img/eye-lord-GIF-unscreen.gif");
+        $(".logo").attr("src", "../css/img/eye-lord-GIF-unscreen.gif").addClass("sauron-logo");
+        $(".text-center").addClass("lotr-current-weather");
 
         console.log('inside the function');
         //geocodes the coords for Tongoriro National Park New Zealand
@@ -387,10 +376,6 @@ $(() => {
                 .fail(console.error);
         });
     });
-
-
-
-
 
 
 ///////////////////////////    EVENTS      /////////////////////////////////////////////

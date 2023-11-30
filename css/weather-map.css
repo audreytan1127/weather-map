@@ -7,7 +7,7 @@
 
 .logo {
     width: 15vh;
-    height: 10vh;
+    height: 15vh;
 }
 .nav-container {
     margin: unset;
@@ -56,4 +56,14 @@ body {
 .five-day-card {
     border: 1rem white;
     border-radius: 1.25rem;
+}
+.change-lotr{
+    color: var(--fourth-color);
+}
+.sauron-logo{
+    width: 15vh;
+    height: 10vh;
+}
+.lotr-current-weather{
+    color: var(--fourth-color);
 }
